@@ -1,8 +1,9 @@
-# Sports Image Classification with ResNet-50
+# Sports Image Classification
 
-This project implements a deep learning pipeline for **multi-class sports image classification** using a fine-tuned **ResNet-50** model from `torchvision`.
+This project implements a deep learning pipeline for **multi-class sports image classification** using fine-tuned ResNet family models from `torchvision`.
+You can copy the ipynb file from /demo and run the demo directly in Google Colab (recommended), or use the Python script provideded in the
+repo to replicate this project.
 
-The code here is a cleaned-up, modular version of the original `sports_classification.ipynb` notebook.
 
 ---
 
@@ -45,8 +46,8 @@ The code here is a cleaned-up, modular version of the original `sports_classific
 ### 1. Clone & create environment
 
 ```bash
-git clone <YOUR_REPO_URL>.git
-cd <YOUR_REPO_NAME>
+git clone https://github.com/wesk124/sports-classification.git
+cd sports-classification
 
 python -m venv .venv
 source .venv/bin/activate   # On Windows: .venv\Scripts\activate
@@ -56,27 +57,6 @@ pip install -r requirements.txt
 
 ---
 
-## Kaggle / `kagglehub` Setup
-
-The dataset is pulled via [`kagglehub`](https://github.com/Kaggle/kagglehub) using the handle:
-
-```text
-gpiosenka/sports-classification
-```
-
-Configure Kaggle credentials, either by:
-
-- Creating `~/.kaggle/kaggle.json` with your API key, or  
-- Setting environment variables:
-
-```bash
-export KAGGLE_USERNAME=<your_username>
-export KAGGLE_KEY=<your_api_key>
-```
-
-After that, the code will download and extract the dataset automatically when you run `main.py` or `demo.py`.
-
----
 
 ## How to Run the Demo
 
@@ -89,7 +69,7 @@ python demo/demo.py
 
 The demo will:
 
-- Load the pre-trained ResNet-50 model
+- Load the pre-trained ResNet-<x> model
 - Run inference on a batch of test images
 - Print a few predictions
 - Save predictions to `results/demo_predictions.json`
@@ -177,22 +157,9 @@ All key configuration (paths, hyperparameters) is centralized in `src/config.py`
 - `BATCH_SIZE = 32`
 - `NUM_EPOCHS = 15`
 - `LEARNING_RATE = 1e-3`
-- `BEST_MODEL_PATH = "checkpoints/best_model_resnet50.pth"`
+- `BEST_MODEL_PATH = "checkpoints/best_model_resnet<x>.pth"`
 
 You can tweak these values in `config.py` and re-run training.
-
----
-
-## Pre-trained Model Link
-
-> **TODO (fill in for submission):**  
-> Upload your trained `best_model_resnet50.pth` to a file-sharing service and paste the link here.
-
-Examples:
-
-- Google Drive: `https://drive.google.com/uc?id=<FILE_ID>`
-- Dropbox: `https://www.dropbox.com/s/<ID>/best_model_resnet50.pth?dl=1`
-- Hugging Face Hub: `https://huggingface.co/<user>/<repo>/resolve/main/best_model_resnet50.pth`
 
 ---
 
