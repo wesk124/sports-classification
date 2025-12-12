@@ -1,7 +1,7 @@
 # Sports Image Classification
 
-This project is a EE P 596 Final Project completed by Sheng Wei and Hui Dong, which implements a deep learning pipeline for **multi-class sports image classification** using fine-tuned ResNet family models from `torchvision`.
-You can copy the ipynb file from /demo and run the demo directly in Google Colab (recommended), or use the Python script provideded in the
+This project is an EE P 596 Final Project completed by Sheng Wei and Hui Dong, which implements a deep learning pipeline for **multi-class sports image classification** using fine-tuned ResNet family models from `torchvision`.
+You can copy the .ipynb file from /demo and run the demo directly in Google Colab (recommended), or use the Python script provideded in the
 repo to replicate this project.
 
 
